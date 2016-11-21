@@ -1,0 +1,8 @@
+prefix=/home/alessandro/catkin_ws/devel
+
+Name: ackermann_navigation
+Description: Description of ackermann_navigation
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/alessandro/catkin_ws/devel/lib 
+Requires: 

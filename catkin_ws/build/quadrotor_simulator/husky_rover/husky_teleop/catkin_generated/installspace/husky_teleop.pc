@@ -1,0 +1,8 @@
+prefix=/home/alessandro/catkin_ws/install
+
+Name: husky_teleop
+Description: Description of husky_teleop
+Version: 0.0.2
+Cflags: 
+Libs: -L/home/alessandro/catkin_ws/install/lib 
+Requires: 

@@ -1,0 +1,8 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_viz")
+set(husky_viz_VERSION "0.0.3")
+set(husky_viz_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(husky_viz_BUILD_DEPENDS "roslaunch")
+set(husky_viz_RUN_DEPENDS "husky_description" "husky_interactive_markers" "joint_state_publisher" "rviz")
+set(husky_viz_DEPRECATED "")
+set(husky_viz_RUN_DEPENDS_husky_description_VERSION_GTE "0.0.2")
+set(husky_viz_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_navigation")
+set(husky_navigation_MAINTAINER "Prasenjit Mukherjee <pmukherj@clearpathrobotics.com>")
+set(husky_navigation_DEPRECATED "")
+set(husky_navigation_VERSION "0.0.6")
+set(husky_navigation_BUILD_DEPENDS "roslaunch")
+set(husky_navigation_RUN_DEPENDS "robot_state_publisher" "urdf" "xacro" "move_base" "amcl" "gmapping" "map_server")
+set(husky_navigation_BUILDTOOL_DEPENDS "catkin")

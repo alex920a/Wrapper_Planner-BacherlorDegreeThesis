@@ -1,0 +1,142 @@
+#include <cstdio>
+#include <stdio.h>
+#include "ros/ros.h"
+#include "ros/console.h"
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "nav_msgs/GetMap.h"
+#include "tf/LinearMath/Matrix3x3.h"
+#include "geometry_msgs/Quaternion.h"
+#include <wrapper_planner/include/wrapper_planner/wrapper_planning.h>
+
+using namespace std;
+ 
+/**
+* @brief wrapper for a path planner dynamic library starting from a map
+  */
+  
+
+
+
+
+#define USAGE "Usage: \n" \
+" wrapper_path_planner map_hystory "
+#define MAX_FILENAME 256
+
+int main(int argc, char** argv)
+{
+  ros::init(argc, argv, "wrapper_path_planner");
+  std::string map_hystory;
+  FILE*  input_file;
+  char buff[256];
+  char temp;
+  int pos=0;
+  char w[10],h[10];
+  int start_x,start_y, goal_x,goal_y;
+  
+  int width=0,height=0;
+  
+
+  if(argc!=2)
+  {
+  	 puts(USAGE);
+         return 1;	
+  }
+  else
+  {
+  	ROS_INFO("starting planner wrapper!!:)");
+  	ROS_INFO("setting hystory map from file: %s",argv[1]);
+  	//strcpy(map_hystory.data(), argv[1]);
+  	map_hystory=argv[1];
+  }
+  
+  //open map file
+  ROS_INFO("Trying to open the map file:%s",map_hystory.c_str());
+  if((input_file=fopen(map_hystory.c_str(),"r"))==NULL)
+  {
+  	ROS_INFO("error in opening the file. exit");
+  	exit(1);
+  }
+  else 
+        ROS_INFO("File opened.");
+        
+        
+      
+      //have to read the initial weight,height values
+      
+      //read P5, then the second line, and finally the line with width and height
+      
+      	while((temp=getc(input_file))!='\n'); //P5
+      	while((temp=getc(input_file))!='\n'); //second line
+      	
+      	while((temp=getc(input_file))!=' ')  //width
+      	{
+      		w[pos]=temp;
+      		pos++;
+      	}
+      	w[pos]='\0';
+      	width=atoi(w);
+      	
+      	pos=0;
+      	while((temp=getc(input_file))!='\n')  //lenght
+      	{
+      		h[pos]=temp;
+      		pos++;
+      	}
+      	h[pos]='\0';
+      	height=atoi(h);
+      	
+     
+      
+      
+      ROS_INFO("width:%d, height=%d of the map",width,height);
+      
+      ROS_INFO("choose start(x,y) and goal(x,y) within the width-height, starting from (1,1)");
+      
+      do
+      {
+      	 ROS_INFO("insert coordinate x for the start point (1<=start_x<=%d)",width);
+      	 cin>>start_x;
+      }while(start_x<1 || start_x>width);
+      
+      
+      do
+      {
+      	 ROS_INFO("insert coordinate y for the start point (1<=start_y<=%d)",height);
+      	 cin>>start_y;
+      }while(start_y<1 || start_y>height);
+      
+      do
+      {
+      	 ROS_INFO("insert coordinate x for the goal point (1<=goal_x<=%d) different from start_x",width);
+      	 cin>>goal_x;
+      }while(goal_x<1 || goal_x>width || goal_x==start_x);
+      
+      
+      do
+      {
+      	 ROS_INFO("insert coordinate y for the goal point (1<=goal_y<=%d) differente from start_y",height);
+      	 cin>>goal_y;
+      }while(goal_y<1 || goal_y>height || goal_y==start_y);
+      
+      ROS_INFO("start(%d,%d), goal(%d,%d)",start_x,start_y, goal_x,goal_y);
+      
+      ROS_INFO("closing file map...");
+      fclose(input_file);
+      
+      
+  
+  WrapperPlanning wrapper=new WrapperPlanning();
+
+  while(!wrapper.goal_reached_)
+    ros::spinOnce();
+    
+  ROS_INFO("Goal reached!!;) ");  
+
+  return 0;
+}
+
+
+
+

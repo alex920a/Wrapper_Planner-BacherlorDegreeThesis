@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package>
+  <name>quadrotor_simulator</name>
+  <version>0.0.1</version>
+  <description>The quadrotor package</description>
+
+  <maintainer email="sherpa@todo.todo">sherpa</maintainer>
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <export>
+
+  </export>
+</package>

@@ -1,0 +1,8 @@
+prefix=/home/alessandro/catkin_ws/install
+
+Name: wrapper_planner
+Description: Description of wrapper_planner
+Version: 0.0.0
+Cflags: -I/home/alessandro/catkin_ws/install/include
+Libs: -L/home/alessandro/catkin_ws/install/lib -lwrapper_planner
+Requires: roscpp rospy std_msgs

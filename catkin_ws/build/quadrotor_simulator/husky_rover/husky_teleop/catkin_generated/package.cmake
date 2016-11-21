@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_teleop")
+set(husky_teleop_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(husky_teleop_DEPRECATED "")
+set(husky_teleop_VERSION "0.0.2")
+set(husky_teleop_BUILD_DEPENDS )
+set(husky_teleop_RUN_DEPENDS "geometry_msgs" "rospy" "sensor_msgs" "std_msgs" "joy")
+set(husky_teleop_BUILDTOOL_DEPENDS "catkin")

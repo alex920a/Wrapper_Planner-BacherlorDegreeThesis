@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>husky_robot</name>
+  <version>0.0.3</version>
+  <description>The husky_robot metapackage</description>
+  <maintainer email="mpurvis@clearpathrobotics.com">Mike Purvis</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend version_gte="0.0.4">husky_bringup</run_depend>
+  <run_depend>husky_navigation</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

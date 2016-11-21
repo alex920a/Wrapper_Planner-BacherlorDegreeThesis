@@ -1,0 +1,8 @@
+prefix=/home/alessandro/catkin_ws/install
+
+Name: husky_navigation
+Description: Description of husky_navigation
+Version: 0.0.6
+Cflags: 
+Libs: -L/home/alessandro/catkin_ws/install/lib 
+Requires: 

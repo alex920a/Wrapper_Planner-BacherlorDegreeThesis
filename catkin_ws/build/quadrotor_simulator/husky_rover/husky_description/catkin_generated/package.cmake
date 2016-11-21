@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_description")
+set(husky_description_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(husky_description_DEPRECATED "")
+set(husky_description_VERSION "0.0.2")
+set(husky_description_BUILD_DEPENDS )
+set(husky_description_RUN_DEPENDS "robot_state_publisher" "urdf" "xacro")
+set(husky_description_BUILDTOOL_DEPENDS "catkin")

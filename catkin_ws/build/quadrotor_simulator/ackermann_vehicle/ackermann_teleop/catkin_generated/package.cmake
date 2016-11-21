@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ackermann_teleop")
+set(ackermann_teleop_MAINTAINER "sherpa <sherpa@todo.todo>")
+set(ackermann_teleop_DEPRECATED "")
+set(ackermann_teleop_VERSION "0.0.1")
+set(ackermann_teleop_BUILD_DEPENDS )
+set(ackermann_teleop_RUN_DEPENDS )
+set(ackermann_teleop_BUILDTOOL_DEPENDS "catkin")

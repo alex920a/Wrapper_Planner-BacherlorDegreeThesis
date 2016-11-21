@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "ackermann_navigation")
+set(ackermann_navigation_MAINTAINER "Jim Rothrock <jim.rothrock@wunderkammerlab.com>")
+set(ackermann_navigation_DEPRECATED "")
+set(ackermann_navigation_VERSION "0.1.0")
+set(ackermann_navigation_BUILD_DEPENDS )
+set(ackermann_navigation_RUN_DEPENDS "joint_state_publisher" "robot_state_publisher" "rviz" "xacro")
+set(ackermann_navigation_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_gazebo")
+set(husky_gazebo_MAINTAINER "Yan Ma <y22ma@clearpathrobotics.com>")
+set(husky_gazebo_DEPRECATED "")
+set(husky_gazebo_VERSION "0.0.3")
+set(husky_gazebo_BUILD_DEPENDS )
+set(husky_gazebo_RUN_DEPENDS "gazebo_ros" "husky_description" "robot_pose_ekf")
+set(husky_gazebo_BUILDTOOL_DEPENDS "catkin")

@@ -1,0 +1,8 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_robot")
+set(husky_robot_VERSION "0.0.3")
+set(husky_robot_MAINTAINER "Mike Purvis <mpurvis@clearpathrobotics.com>")
+set(husky_robot_BUILD_DEPENDS )
+set(husky_robot_RUN_DEPENDS_husky_bringup_VERSION_GTE "0.0.4")
+set(husky_robot_RUN_DEPENDS "husky_bringup" "husky_navigation")
+set(husky_robot_DEPRECATED "")
+set(husky_robot_BUILDTOOL_DEPENDS "catkin")

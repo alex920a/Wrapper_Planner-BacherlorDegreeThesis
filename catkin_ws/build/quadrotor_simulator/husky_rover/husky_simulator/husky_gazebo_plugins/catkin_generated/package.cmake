@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "husky_gazebo_plugins")
+set(husky_gazebo_plugins_MAINTAINER "Yan Ma <yanma@clearpathrobotics.com>")
+set(husky_gazebo_plugins_DEPRECATED "")
+set(husky_gazebo_plugins_VERSION "0.0.3")
+set(husky_gazebo_plugins_BUILD_DEPENDS "tf" "gazebo" "gazebo_ros" "gazebo_plugins" "gazebo_msgs" "roscpp" "std_msgs")
+set(husky_gazebo_plugins_RUN_DEPENDS "tf" "gazebo" "gazebo_ros" "gazebo_plugins" "gazebo_msgs" "roscpp" "std_msgs")
+set(husky_gazebo_plugins_BUILDTOOL_DEPENDS "catkin")
