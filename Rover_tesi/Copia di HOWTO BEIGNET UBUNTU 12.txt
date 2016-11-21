@@ -1,0 +1,25 @@
+sudo apt-get install llvm-3.3
+sudo apt-get install clang-3.3 libclang-3.3-dev libxfixes-dev  libgl1-mesa-dev libdrm-dev  libx11-dev 
+
+export PATH=$PATH:"/usr/lib/llvm-3.3/bin/"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/lib/llvm-3.3/bin/"   da mettere ad ogni avvio di terminale (oppure permanente con /bashrc)
+
+http://www.freedesktop.org/wiki/Software/Beignet/
+
+git clone git://anongit.freedesktop.org/beignet
+
+cd ./beignet
+
+mkdir build
+
+cd build
+
+cmake ../        se manca egl scaricare mesa-utils-extra e libegl1-mesa - free implementation of the EGL API -- runtime
+		libegl1-mesa-dbg - free implementation of the EGL API -- debugging symbols
+		libegl1-mesa-dev - free implementation of the EGL API -- development files
+		libegl1-mesa-drivers - free implementation of the EGL API -- hardware drivers
+		libegl1-mesa-drivers-dbg - free implementation of the EGL API -- driver debugging symbols
+
+make
+
+sudo make install

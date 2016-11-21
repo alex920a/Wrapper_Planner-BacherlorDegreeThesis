@@ -1,9 +1,0 @@
-\subsubsection usage Usage
-\verbatim
-<node name="joint_tilter_controller" pkg="quadrotor_simulator" type="joint_tilter_controller">
-  <param name="offset" type="double" value="-0.165" />
-  <param name="amplitude" type="double" value="0.165" />
-  <param name="frequency" type="double" value="1.0" />
-</node>
-\endverbatim
-

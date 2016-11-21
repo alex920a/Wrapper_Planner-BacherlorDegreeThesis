@@ -1,0 +1,15 @@
+digraph G {
+"base_link" -> "back_left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.361 Hz\nMost recent transform: 414.712 \nBuffer length: 4.053 sec\n"];
+"base_footprint" -> "base_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+"base_link" -> "back_right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.361 Hz\nMost recent transform: 414.712 \nBuffer length: 4.053 sec\n"];
+"base_link" -> "front_left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.361 Hz\nMost recent transform: 414.712 \nBuffer length: 4.053 sec\n"];
+"base_link" -> "front_right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.361 Hz\nMost recent transform: 414.712 \nBuffer length: 4.053 sec\n"];
+"odom" -> "base_footprint"[label="Broadcaster: /robot_pose_ekf\nAverage rate: 30.103 Hz\nMost recent transform: 414.735 \nBuffer length: 4.086 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 20.159 Hz\nMost recent transform: 415.667 \nBuffer length: 4.018 sec\n"];
+"base_footprint" -> "base_footprint_front_bumper_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+"base_footprint" -> "base_footprint_rear_bumper_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+"base_footprint" -> "base_footprint_top_plate_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+"base_footprint" -> "base_footprint_user_plate_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+"base_footprint" -> "base_footprint_user_rail_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+"base_link" -> "laser_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.250 Hz\nMost recent transform: 415.203 \nBuffer length: 4.033 sec\n"];
+}

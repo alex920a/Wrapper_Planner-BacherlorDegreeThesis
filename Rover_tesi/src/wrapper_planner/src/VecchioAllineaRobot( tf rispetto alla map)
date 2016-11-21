@@ -1,0 +1,114 @@
+void AllineaRobot(int gradi)
+{
+	bool allineato=false;
+	
+	//prendo il tf del base_link 
+	tf::TransformListener listener;
+	ros::Rate rate(10);
+	tf::StampedTransform transform;
+	double destinationAngleRad=(gradi*3.14)/180; //fare il caso degli angoli positivi
+	//printf("Angolo destinazione:%f\n",destinationAngleRad);
+	
+        while(!allineato)
+        {
+            try
+	    {
+		listener.waitForTransform("/map", "/base_link", ros::Time(0), ros::Duration(2) );
+		listener.lookupTransform("/map","/base_link",ros::Time(0), transform);
+	    }
+	    catch (tf::TransformException ex)
+	    {
+		ROS_ERROR("Nope! %s", ex.what());
+		//ros::Duration(0.5).sleep();
+	    } 
+	    
+	    double angolo=tf::getYaw(transform.getRotation());
+		
+	    //Angolo in radianti (sull'asse x a quanto sembra) fra base link e map
+	    printf("Angolo in radianti fra base link e map: %f\n",angolo);
+	    double diff=angolo-destinationAngleRad;    
+	    printf("differenza: %f\n",diff);     //se la differenza è negativa devo ruotare in senso orario, altrimenti senso antiorario
+	        
+	    if(abs(diff)<=EPSILON_ROT)
+	    {
+	  	allineato=true;
+	    	printf("Allineato!\n");
+	    }	 
+	    else
+	    {
+	    	//mando un comando di rotazione
+	    	printf("ruota ancora!\n");
+	    	allineato=false;
+	    	geometry_msgs::Twist cmd_rot;
+	    	
+	    	if(diff<0)
+	    		cmd_rot.angular.z=1;
+	    	else
+	    		cmd_rot.angular.z=-1;
+	    			
+	    	cmd_vel_pub_.publish(cmd_rot);
+	    }
+	    ros::Duration(0.5).sleep();	   
+        }
+}
+
+
+
+
+/777777777777777777777777777777777777777777
+
+void AllineaRobot(int gradi)
+{
+	bool allineato=false;
+	
+	//prendo il tf del base_link 
+	tf::TransformListener listener;
+	ros::Rate rate(10);
+	tf::StampedTransform transform;
+	double destinationAngleRad=(gradi*3.14159)/180; 
+	//printf("Angolo destinazione:%f\n",destinationAngleRad);
+	
+        while(!allineato)
+        {
+            try
+	    {
+		listener.waitForTransform("/map", "/base_link", ros::Time(0), ros::Duration(1.5) );
+		listener.lookupTransform("/map","/base_link",ros::Time(0), transform);
+	    }
+	    catch (tf::TransformException ex)
+	    {
+		ROS_ERROR("Nope! %s", ex.what());
+		ros::Duration(1.0).sleep();
+	    } 
+	    //ros::Duration(0.3).sleep();
+	    
+	    double angolo=tf::getYaw(transform.getRotation());
+		
+	    //Angolo in radianti (sull'asse x a quanto sembra) fra base link e map
+	    //printf("Angolo in radianti fra base link e map: %f\n",angolo);
+	    double diff=destinationAngleRad-angolo;    
+	    printf("differenza: %f\n",diff);     //se la differenza è negativa devo ruotare in senso orario, altrimenti senso antiorario
+	        
+	    if(abs(diff)<=EPSILON_ROT)
+	    {
+	  	allineato=true;
+	    	printf("Allineato!\n");
+	    }	 
+	    else
+	    {
+	    	//mando un comando di rotazione
+	    	//printf("ruota ancora!\n");
+	    	allineato=false;
+	    	geometry_msgs::Twist cmd_rot;
+	    	
+	    	if(diff>0)
+	    		cmd_rot.angular.z=0.4;
+	    	else
+	    		cmd_rot.angular.z=-0.4;
+	    			
+	    	cmd_vel_pub_.publish(cmd_rot);
+	    }
+	    //ros::Duration(0.1).sleep();	   
+        }
+}
+

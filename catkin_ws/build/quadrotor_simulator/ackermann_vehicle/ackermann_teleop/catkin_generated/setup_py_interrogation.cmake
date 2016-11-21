@@ -1,6 +1,0 @@
-set(ackermann_teleop_SETUP_PY_VERSION "0.0.1")
-set(ackermann_teleop_SETUP_PY_SCRIPTS "")
-set(ackermann_teleop_SETUP_PY_PACKAGES "ackermann_teleop")
-set(ackermann_teleop_SETUP_PY_PACKAGE_DIRS "src/ackermann_teleop")
-set(ackermann_teleop_SETUP_PY_MODULES "")
-set(ackermann_teleop_SETUP_PY_MODULE_DIRS "")

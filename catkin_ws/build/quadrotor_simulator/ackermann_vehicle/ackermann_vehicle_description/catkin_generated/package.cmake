@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "ackermann_vehicle_description")
-set(ackermann_vehicle_description_MAINTAINER "Jim Rothrock <jim.rothrock@wunderkammerlab.com>")
-set(ackermann_vehicle_description_DEPRECATED "")
-set(ackermann_vehicle_description_VERSION "0.1.0")
-set(ackermann_vehicle_description_BUILD_DEPENDS )
-set(ackermann_vehicle_description_RUN_DEPENDS "joint_state_publisher" "robot_state_publisher" "rviz" "xacro")
-set(ackermann_vehicle_description_BUILDTOOL_DEPENDS "catkin")

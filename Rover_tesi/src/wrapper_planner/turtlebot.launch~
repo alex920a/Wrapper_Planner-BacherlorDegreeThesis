@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- launch turtlebot in a empty world in gazebo -->
+  <include file="$(find turtlebot_gazebo)/launch/turtlebot_empty_world.launch">
+
+  </include>
+  
+  <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf">
+    <rosparam>
+      freq: 30.0
+      sensor_timeout: 1.0
+      publish_tf: true
+      odom_used: true
+      imu_used: true
+      vo_used: true
+      output_frame: odom
+    </rosparam>
+  </node>
+
+   <!-- launch gmapping   -->
+   <include file="$(find turtlebot_gazebo)/launch/gmapping_demo.launch"/>
+
+<!--    launch amcl-->
+<!--    <include file="$(find turtlebot_gazebo)/launch/amcl_demo.launch"/> -->
+
+
+
+
+  <!-- launch teleop -->
+   <include file="$(find turtlebot_teleop)/launch/xbox360_teleop.launch"/>
+
+  <!-- launch turtlebot in rviz -->
+   <include file="$(find turtlebot_rviz_launchers)/launch/view_navigation.launch"/>
+
+
+</launch>

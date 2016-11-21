@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "optitrack_node_udp")
-set(optitrack_node_udp_MAINTAINER "Alex Bencz <abencz@clearpathrobotics.com>")
-set(optitrack_node_udp_DEPRECATED "")
-set(optitrack_node_udp_VERSION "0.0.0")
-set(optitrack_node_udp_BUILD_DEPENDS "roscpp" "std_msgs" "tf" "geometry_msgs" "roslaunch")
-set(optitrack_node_udp_RUN_DEPENDS "roscpp" "std_msgs" "geometry_msgs" "tf")
-set(optitrack_node_udp_BUILDTOOL_DEPENDS "catkin")

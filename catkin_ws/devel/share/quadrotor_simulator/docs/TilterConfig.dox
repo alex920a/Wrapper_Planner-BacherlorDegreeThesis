@@ -1,8 +1,0 @@
-\subsubsection parameters ROS parameters
-
-Reads and maintains the following parameters on the ROS server
-
-- \b "~offset" : \b [double] DC offset of the sine wave. min: -1.0, default: -0.165, max: 1.0
-- \b "~amplitude" : \b [double] Amplitude of the sine wave. min: 0.0, default: 0.165, max: 1.0
-- \b "~frequency" : \b [double] Frequency of the sine wave. min: 0.0, default: 1.0, max: 10.0
-

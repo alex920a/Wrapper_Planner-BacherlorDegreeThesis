@@ -1,0 +1,14 @@
+digraph G {
+"base_link" -> "back_left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.583 Hz\nMost recent transform: 502.979 \nBuffer length: 3.786 sec\n"];
+"base_footprint" -> "base_link"[label="Broadcaster: /ekf_localization\nAverage rate: 53.743 Hz\nMost recent transform: 503.469 \nBuffer length: 4.261 sec\n"];
+"base_link" -> "back_right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.583 Hz\nMost recent transform: 502.979 \nBuffer length: 3.786 sec\n"];
+"base_link" -> "front_left_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.583 Hz\nMost recent transform: 502.979 \nBuffer length: 3.786 sec\n"];
+"base_link" -> "front_right_wheel"[label="Broadcaster: /robot_state_publisher\nAverage rate: 29.583 Hz\nMost recent transform: 502.979 \nBuffer length: 3.786 sec\n"];
+"base_footprint" -> "base_footprint_front_bumper_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.271 Hz\nMost recent transform: 503.469 \nBuffer length: 3.766 sec\n"];
+"base_footprint" -> "base_footprint_rear_bumper_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.271 Hz\nMost recent transform: 503.469 \nBuffer length: 3.766 sec\n"];
+"base_footprint" -> "base_footprint_top_plate_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.271 Hz\nMost recent transform: 503.469 \nBuffer length: 3.766 sec\n"];
+"base_footprint" -> "base_footprint_user_plate_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.271 Hz\nMost recent transform: 503.469 \nBuffer length: 3.766 sec\n"];
+"base_footprint" -> "base_footprint_user_rail_part"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.271 Hz\nMost recent transform: 503.469 \nBuffer length: 3.766 sec\n"];
+"base_link" -> "laser_link"[label="Broadcaster: /robot_state_publisher\nAverage rate: 30.271 Hz\nMost recent transform: 503.469 \nBuffer length: 3.766 sec\n"];
+"map" -> "odom"[label="Broadcaster: /amcl\nAverage rate: 16.601 Hz\nMost recent transform: 503.996 \nBuffer length: 3.795 sec\n"];
+}

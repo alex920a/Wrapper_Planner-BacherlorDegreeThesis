@@ -1,0 +1,4 @@
+#include "stdio.h"
+
+void StampaOccupancyGrid(unsigned char mappa[],int sizemap,int width);
+int** CelleOccupate(unsigned char mappa[],int sizemap,int width);

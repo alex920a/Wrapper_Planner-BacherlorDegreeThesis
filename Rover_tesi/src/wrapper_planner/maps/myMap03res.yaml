@@ -1,0 +1,7 @@
+image: myMap03res.pgm
+resolution: 0.300000
+origin: [-19.200000, -29.300000, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+

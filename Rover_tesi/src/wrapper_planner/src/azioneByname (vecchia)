@@ -1,0 +1,48 @@
+void AzioneByNamePrimitiva(string primitiva)
+{
+	int gradi=-1;
+	
+	switch(primitiva)
+	{
+	 case "go_north":
+	 	gradi=0;
+		printf("proseguo verso nord\n");
+		break;
+	 case "go_ne":
+	 	gradi=-45;
+		printf("proseguo verso nord est\n");
+		break;
+	 case "go_east":
+	 	gradi=-90;
+		printf("proseguo verso est\n");
+		break;
+	 case "go_se":
+	 	gradi=-135;
+		printf("proseguo verso sud est\n");
+		break;
+	 case "go_south":
+	 	gradi=180;
+		printf("proseguo verso sud\n");
+		break;
+	 case "go_sw":
+	 	gradi=135;
+		printf("proseguo verso sud ovest\n");
+		break;	
+	 case "go_west":
+	 	gradi=90;
+		printf("proseguo verso ovest\n");
+		break;
+	 case "go_nw":
+	 	gradi=0;
+		printf("proseguo verso nord ovest\n");
+		break;
+	 default:
+	 	gradi=-1;
+	 	printf("primitiva non riconosciuta!\n")	;
+		
+	}
+		
+	if(gradi!=-1)
+		MovimentoRobot(gradi);	
+			
+}

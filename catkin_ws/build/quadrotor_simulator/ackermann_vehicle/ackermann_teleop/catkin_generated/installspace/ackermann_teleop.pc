@@ -1,8 +1,0 @@
-prefix=/home/alessandro/catkin_ws/install
-
-Name: ackermann_teleop
-Description: Description of ackermann_teleop
-Version: 0.0.1
-Cflags: -I/home/alessandro/catkin_ws/install/include
-Libs: -L/home/alessandro/catkin_ws/install/lib 
-Requires: 
